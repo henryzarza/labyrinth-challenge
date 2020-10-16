@@ -1,4 +1,6 @@
-import React from "react";
+import React from 'react';
+
+import styles from './styles.module.css';
 
 /** keep, add, change or remove types/props */
 export type Position = [/** row */ number, /** col */ number];
@@ -16,11 +18,13 @@ export interface Props {
 const Labyrinth = (props: Props) => {
   return (
     <div>
-      <div data-testid="position-ball">position ball</div>
-      <div data-testid="cell">cell</div>
-      <div data-testid="moves-message">moves message</div>
-      <div data-testid="lose-message">lose message</div>
-      <div data-testid="win-message">win message</div>
+      <div data-testid='position-ball' className={styles.test}>
+        position ball
+      </div>
+      <div data-testid='cell'>cell</div>
+      <div data-testid='moves-message'>moves message</div>
+      <div data-testid='lose-message'>lose message</div>
+      <div data-testid='win-message'>win message</div>
     </div>
   );
 };
