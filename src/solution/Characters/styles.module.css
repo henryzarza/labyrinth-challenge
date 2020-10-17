@@ -1,6 +1,8 @@
 .container {
+  animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;
+  opacity: 0;
 }
 
 .list {

@@ -5,12 +5,12 @@ import RadioBtn from '../RadioBtn';
 import styles from './styles.module.css';
 
 export interface Props {
-  onChange?: number;
+  goToNextStep: (step: number) => void;
 }
 
 const Result = (props: Props) => {
   return (
-    <section className={styles.container}>
+    <section className={`fadeInRight ${styles.container}`}>
       <h3 className='small-title'>{i18next.t('main:score')}</h3>
       <RadioBtn />
       <ul className={styles.scores}>
@@ -25,6 +25,13 @@ const Result = (props: Props) => {
           </li>
         ))}
       </ul>
+      <button
+        className='base-text fw-bold button'
+        type='button'
+        onClick={() => props.goToNextStep(0)}
+      >
+        {i18next.t('main:playAgain')}
+      </button>
     </section>
   );
 };

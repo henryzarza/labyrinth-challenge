@@ -1,3 +1,7 @@
-.test {
-  color: red;
+.container {
+  animation-fill-mode: forwards;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
 }

@@ -1,20 +1,18 @@
-import React from 'react';
-import i18next from 'i18next';
+import React, { useState } from 'react';
 
 // import { MAZES } from '../config/constants';
 import Characters from './Characters';
-// import Labyrinth from './Labyrinth';
-// import Result from './Result';
+import Labyrinth from './Labyrinth';
+import Result from './Result';
 
 function Solution() {
+  const [currentStep, setCurrentStep] = useState(0);
+
   return (
     <main className='main-container'>
-      <Characters />
-      {/* <Labyrinth />*/}
-      {/* <Result /> */}
-      <button className='base-text fw-bold button' type='button'>
-        {i18next.t('main:next')}
-      </button>
+      {currentStep === 0 && <Characters goToNextStep={setCurrentStep} />}
+      {currentStep === 1 && <Labyrinth goToNextStep={setCurrentStep} />}
+      {currentStep === 2 && <Result goToNextStep={setCurrentStep} />}
     </main>
   );
 }
