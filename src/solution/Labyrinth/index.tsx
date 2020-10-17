@@ -1,4 +1,5 @@
 import React from 'react';
+import i18next from 'i18next';
 
 import styles from './styles.module.css';
 
@@ -15,9 +16,10 @@ export interface Props {
   visibleCells?: number;
 }
 
-const Labyrinth = (props: Props) => {
+const Labyrinth = () => {
   return (
-    <div>
+    <section>
+      <h1 className='title'>{i18next.t('main:title')}</h1>
       <div data-testid='position-ball' className={styles.test}>
         position ball
       </div>
@@ -25,7 +27,7 @@ const Labyrinth = (props: Props) => {
       <div data-testid='moves-message'>moves message</div>
       <div data-testid='lose-message'>lose message</div>
       <div data-testid='win-message'>win message</div>
-    </div>
+    </section>
   );
 };
 

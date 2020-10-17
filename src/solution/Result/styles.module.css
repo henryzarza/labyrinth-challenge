@@ -1,0 +1,23 @@
+.container {
+  border: 1px solid var(--mona-lisa);
+  border-radius: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.scores {
+  margin-top: 1rem;
+}
+
+.item {
+  align-items: center;
+  border-bottom: 0.15rem dotted var(--mona-lisa);
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.item:last-of-type {
+  border-bottom: none;
+}
