@@ -6,7 +6,7 @@ i18next.init({
 });
 
 i18next.addResources('en', 'main', {
-  title: 'This is a title',
+  title: 'Labyrinth Challenge',
   apple: 'Apple',
   cat: 'Cat',
   dog: 'Dog',
@@ -24,5 +24,6 @@ i18next.addResources('en', 'main', {
   selectLevel: 'Select the level',
   next: "I'm Ready",
   date: 'Date',
-  points: 'Points'
+  points: 'Points',
+  metrics: 'Go To Metrics'
 });

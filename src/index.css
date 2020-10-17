@@ -3,6 +3,7 @@
 @import './css/normalize.css';
 @import './css/typography.css';
 @import './css/variables.css';
+@import './css/utils.css';
 
 * {
   font-family: 'Raleway', sans-serif;
@@ -27,6 +28,7 @@ body {
 }
 
 .button {
+  align-self: center;
   background-color: var(--white);
   border: 0.1rem solid var(--dodger-blue);
   cursor: pointer;
