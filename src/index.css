@@ -13,3 +13,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.main-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: var(--content-width);
+  min-height: 100vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+.button {
+  background-color: var(--white);
+  border: 0.1rem solid var(--dodger-blue);
+  cursor: pointer;
+  margin-top: 2rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.button:hover,
+.button:active {
+  background-color: var(--dodger-blue);
+  color: var(--white);
+}

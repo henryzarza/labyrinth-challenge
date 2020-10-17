@@ -1,30 +1,21 @@
 import React from 'react';
 import i18next from 'i18next';
 
-import Labyrinth from './Labyrinth';
+// import { MAZES } from '../config/constants';
+import Characters from './Characters';
+// import Labyrinth from './Labyrinth';
+// import Result from './Result';
 
 function Solution() {
   return (
-    <>
-      <h1 className='title'>{i18next.t('main:title')}</h1>
-      <Labyrinth
-        targetPosition={[6, 9]}
-        availableCells={[
-          [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
-          [0, 0, 1, 0, 1, 1, 1, 1, 0, 0],
-          [0, 0, 1, 0, 1, 0, 0, 1, 0, 0],
-          [1, 1, 1, 0, 0, 0, 1, 1, 0, 0],
-          [1, 0, 1, 0, 1, 0, 0, 1, 1, 1],
-          [1, 0, 1, 1, 1, 0, 0, 1, 0, 1],
-          [0, 0, 1, 0, 1, 0, 0, 1, 0, 1],
-          [0, 0, 1, 0, 1, 1, 0, 1, 0, 0],
-          [0, 0, 1, 0, 1, 0, 0, 1, 1, 1]
-        ]}
-        startingPosition={[4, 4]}
-        moveLimit={25}
-        cellSize={30}
-      />
-    </>
+    <main className='main-container'>
+      <Characters />
+      {/* <Labyrinth />*/}
+      {/* <Result /> */}
+      <button className='base-text fw-bold button' type='button'>
+        {i18next.t('main:next')}
+      </button>
+    </main>
   );
 }
 
