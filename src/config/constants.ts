@@ -36,6 +36,18 @@ export const LEVELS = ['beginner', 'intermediate', 'advanced'];
 
 export const MAZES = {
   BEGINNER: {
+    targetPosition: [4, 4],
+    availableCells: [
+      [0, 0, 0, 0, 0],
+      [1, 1, 0, 1, 1],
+      [1, 1, 0, 1, 1],
+      [0, 0, 0, 1, 1],
+      [1, 1, 0, 0, 0]
+    ],
+    startingPosition: [0, 0],
+    moveLimit: 10
+  },
+  INTERMEDIATE: {
     targetPosition: [6, 9],
     availableCells: [
       [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
@@ -50,6 +62,6 @@ export const MAZES = {
     ],
     startingPosition: [4, 4],
     moveLimit: 25,
-    cellSize: 30
+    cellSize: '0.5rem'
   }
 };

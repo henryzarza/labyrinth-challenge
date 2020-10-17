@@ -1,7 +1,51 @@
 .container {
   animation-fill-mode: forwards;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   opacity: 0;
+}
+
+.board {
+  display: grid;
+  height: 20rem;
+  margin: 1rem auto 0;
+  position: relative;
+  width: 20rem;
+}
+
+.cell {
+  border: 0.1rem solid var(--cod-gray);
+  height: 100%;
+  width: 100%;
+}
+
+.cell[data-fill='true'] {
+  background-color: var(--dusty-gray);
+}
+
+.target {
+  background-color: var(--granny-smith-apple);
+}
+
+.start {
+  background-color: var(--kournikova);
+}
+
+.info-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.limit {
+  margin-left: 0.5rem;
+}
+
+.win {
+  color: var(--green);
+}
+
+.lost {
+  color: var(--red);
 }

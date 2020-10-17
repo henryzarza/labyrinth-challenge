@@ -16,8 +16,8 @@ i18next.addResources('en', 'main', {
   beginner: 'Beginner',
   intermediate: 'Intermediate',
   advanced: 'Advanced',
-  winTitle: '¡You win 🙌🥳!',
-  loseTitle: 'You lose 😢😩',
+  wonMsg: 'You won',
+  lostMsg: 'You lost',
   score: 'Your scores',
   playAgain: 'Play again',
   selectCharacter: 'Select Your Character',
@@ -25,5 +25,7 @@ i18next.addResources('en', 'main', {
   next: "I'm Ready",
   date: 'Date',
   points: 'Points',
-  metrics: 'Go To Metrics'
+  metrics: 'Go To Metrics',
+  explanationText: "You can use the keyboard's arrows to move the character",
+  movesLeft: 'Moves left:'
 });
