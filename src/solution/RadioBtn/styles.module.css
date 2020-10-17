@@ -1,0 +1,29 @@
+.input-container {
+  display: flex;
+  margin-top: 1rem;
+}
+
+.input {
+  display: none;
+}
+
+.input + label {
+  background-color: var(--white);
+  border: 0.1rem solid var(--mona-lisa);
+  color: var(--mona-lisa);
+  cursor: pointer;
+  margin-right: 0.8rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.input:last-of-type + label {
+  margin-right: 0;
+}
+
+.input + label:hover,
+.input:checked + label {
+  background-color: var(--mona-lisa);
+  color: var(--white);
+}
