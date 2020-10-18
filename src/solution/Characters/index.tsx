@@ -44,7 +44,12 @@ const Characters = (props: Props) => {
       <h2 className='small-title'>{i18next.t('main:selectLevel')}</h2>
       <RadioBtn setLevel={props.setLevel} />
       {selectedCharacter.src && props.isLevelSelected && (
-        <button className='base-text fw-bold button' type='button' onClick={goToNext}>
+        <button
+          className='base-text fw-bold button'
+          type='button'
+          onClick={goToNext}
+          data-testid='next-button'
+        >
           {i18next.t('main:next')}
         </button>
       )}

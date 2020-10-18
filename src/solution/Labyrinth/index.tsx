@@ -12,7 +12,6 @@ export interface Props {
   moveLimit: number;
   character: string;
   level: string;
-  cellSize?: string;
 }
 
 const Labyrinth = (props: Props) => {
@@ -99,7 +98,7 @@ const Labyrinth = (props: Props) => {
   }, [handleKeyPress]);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} data-testid='board-container'>
       <h1 className='title'>{i18next.t('main:title')}</h1>
       <small className='medium-text'>{i18next.t('main:explanationText')}</small>
       <div ref={boardRef} className={styles.board}>
@@ -110,26 +109,25 @@ const Labyrinth = (props: Props) => {
         />
       </div>
       <div className={styles['info-container']}>
-        <h6 className='base-text' data-testid='moves-message'>
+        <h6 className='base-text'>
           {i18next.t('main:movesLeft')}
-          <strong className={`big-bold-text ${styles.limit}`}>{qtyMovements}</strong>
+          <strong className={`big-bold-text ${styles.limit}`} data-testid='moves-message'>
+            {qtyMovements}
+          </strong>
         </h6>
-        {isWin && (
-          <h6 className={`big-bold-text ${styles.win}`} data-testid='win-message'>
-            {i18next.t('main:wonMsg')}
-          </h6>
-        )}
-        {qtyMovements === 0 && !isWin && (
-          <h6 className={`big-bold-text ${styles.lost}`} data-testid='lose-message'>
-            {i18next.t('main:lostMsg')}
-          </h6>
-        )}
+        <h6 className={`big-bold-text ${styles.win}`} data-testid='win-message'>
+          {isWin && i18next.t('main:wonMsg')}
+        </h6>
+        <h6 className={`big-bold-text ${styles.lost}`} data-testid='lose-message'>
+          {qtyMovements === 0 && !isWin && i18next.t('main:lostMsg')}
+        </h6>
       </div>
       {(isWin || qtyMovements === 0) && (
         <button
           className={`base-text fw-bold button ${styles.button}`}
           type='button'
           onClick={() => props.goToNextStep(2)}
+          data-testid='metrics-button'
         >
           {i18next.t('main:metrics')}
         </button>
