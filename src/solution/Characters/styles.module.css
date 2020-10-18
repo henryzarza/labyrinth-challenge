@@ -1,0 +1,40 @@
+.container {
+  animation-fill-mode: forwards;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+}
+
+.list {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 1rem 0;
+}
+
+.item {
+  align-items: center;
+  background-color: var(--white);
+  border-radius: 0.25rem;
+  box-shadow: 0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  transition: all var(--transition-duration) var(--transition-function);
+}
+
+.item:hover,
+.selected {
+  background-color: var(--tara);
+  box-shadow: 0.2rem 0.2rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+
+.selected {
+  transform: scale(0.9);
+}
+
+.character-img {
+  margin-bottom: 0.5rem;
+  width: 3rem;
+}

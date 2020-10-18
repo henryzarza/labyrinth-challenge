@@ -1,30 +1,19 @@
-import React from 'react';
-import i18next from 'i18next';
+import React, { useState } from 'react';
 
+// import { MAZES } from '../config/constants';
+import Characters from './Characters';
 import Labyrinth from './Labyrinth';
+import Result from './Result';
 
 function Solution() {
+  const [currentStep, setCurrentStep] = useState(0);
+
   return (
-    <>
-      <h1 className='title'>{i18next.t('main:title')}</h1>
-      <Labyrinth
-        targetPosition={[6, 9]}
-        availableCells={[
-          [1, 1, 1, 1, 1, 0, 0, 1, 1, 1],
-          [0, 0, 1, 0, 1, 1, 1, 1, 0, 0],
-          [0, 0, 1, 0, 1, 0, 0, 1, 0, 0],
-          [1, 1, 1, 0, 0, 0, 1, 1, 0, 0],
-          [1, 0, 1, 0, 1, 0, 0, 1, 1, 1],
-          [1, 0, 1, 1, 1, 0, 0, 1, 0, 1],
-          [0, 0, 1, 0, 1, 0, 0, 1, 0, 1],
-          [0, 0, 1, 0, 1, 1, 0, 1, 0, 0],
-          [0, 0, 1, 0, 1, 0, 0, 1, 1, 1]
-        ]}
-        startingPosition={[4, 4]}
-        moveLimit={25}
-        cellSize={30}
-      />
-    </>
+    <main className='main-container'>
+      {currentStep === 0 && <Characters goToNextStep={setCurrentStep} />}
+      {currentStep === 1 && <Labyrinth goToNextStep={setCurrentStep} />}
+      {currentStep === 2 && <Result goToNextStep={setCurrentStep} />}
+    </main>
   );
 }
 
