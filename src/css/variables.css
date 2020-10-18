@@ -1,0 +1,11 @@
+:root {
+  --black: #000;
+  --cod-gray: #464646;
+  --content-width: 64rem;
+  --dusty-gray: #979797;
+  --gallery: #F7F6F4;
+  --quick-transition-duration: 200ms;
+  --transition-duration: 290ms;
+  --transition-function: cubic-bezier(0.79, 0.01, 0.38, 0.99);
+  --white: #FFF;
+}
