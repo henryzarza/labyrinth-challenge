@@ -12,6 +12,8 @@
 
 .scores {
   margin-top: 1rem;
+  max-height: 16rem;
+  overflow-y: auto;
 }
 
 .item {

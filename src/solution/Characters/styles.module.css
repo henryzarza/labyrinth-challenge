@@ -1,4 +1,5 @@
 .container {
+  animation-delay: 200ms;
   animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;

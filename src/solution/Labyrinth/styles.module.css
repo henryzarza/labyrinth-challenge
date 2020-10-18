@@ -1,15 +1,13 @@
 .container {
-  animation-fill-mode: forwards;
   display: flex;
   flex-direction: column;
-  opacity: 0;
+  position: relative;
 }
 
 .board {
   display: grid;
   height: 20rem;
   margin: 1rem auto 0;
-  position: relative;
   width: 20rem;
 }
 
@@ -34,6 +32,7 @@
 .info-container {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin-top: 1rem;
 }
@@ -43,9 +42,31 @@
 }
 
 .win {
+  bottom: -2rem;
   color: var(--green);
+  position: absolute;
 }
 
 .lost {
+  bottom: -2rem;
   color: var(--red);
+  position: absolute;
+}
+
+.character-img {
+  height: 3rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translate(5px, 5px);
+  transition: left var(--quick-transition-duration) var(--transition-function),
+  top var(--quick-transition-duration) var(--transition-function);
+  width: 3rem;
+  will-change: left, top;
+  z-index: 1;
+}
+
+.button {
+  bottom: -7rem;
+  position: absolute;
 }

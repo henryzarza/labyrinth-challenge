@@ -18,7 +18,7 @@ i18next.addResources('en', 'main', {
   advanced: 'Advanced',
   wonMsg: 'You won',
   lostMsg: 'You lost',
-  score: 'Your scores',
+  score: 'Your high scores',
   playAgain: 'Play again',
   selectCharacter: 'Select Your Character',
   selectLevel: 'Select the level',
@@ -27,5 +27,6 @@ i18next.addResources('en', 'main', {
   points: 'Points',
   metrics: 'Go To Metrics',
   explanationText: "You can use the keyboard's arrows to move the character",
-  movesLeft: 'Moves left:'
+  movesLeft: 'Moves left:',
+  noData: 'No data'
 });
