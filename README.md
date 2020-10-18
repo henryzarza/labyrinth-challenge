@@ -34,3 +34,7 @@
 * Level builder
 * War fog
 * Anything you think might add value
+
+## Important 🙇
+
+I assumed the following: `1` is for the gray boxes (walls) and `0` is for empty walls (available to move)
