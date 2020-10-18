@@ -16,14 +16,17 @@ i18next.addResources('en', 'main', {
   beginner: 'Beginner',
   intermediate: 'Intermediate',
   advanced: 'Advanced',
-  winTitle: '¡You win 🙌🥳!',
-  loseTitle: 'You lose 😢😩',
-  score: 'Your scores',
+  wonMsg: 'You won',
+  lostMsg: 'You lost',
+  score: 'Your high scores',
   playAgain: 'Play again',
   selectCharacter: 'Select Your Character',
   selectLevel: 'Select the level',
   next: "I'm Ready",
   date: 'Date',
   points: 'Points',
-  metrics: 'Go To Metrics'
+  metrics: 'Go To Metrics',
+  explanationText: "You can use the keyboard's arrows to move the character",
+  movesLeft: 'Moves left:',
+  noData: 'No data'
 });

@@ -5,7 +5,7 @@ import { LEVELS } from '../../config/constants';
 import styles from './styles.module.css';
 
 export interface Props {
-  onChange?: number;
+  setLevel: (state: string) => void;
 }
 
 const RadioBtn = (props: Props) => {
@@ -13,7 +13,14 @@ const RadioBtn = (props: Props) => {
     <div className={styles['input-container']}>
       {LEVELS.map((level) => (
         <Fragment key={level}>
-          <input className={styles.input} type='radio' name='level' id={level} value={level} />
+          <input
+            className={styles.input}
+            type='radio'
+            name='level'
+            id={level}
+            value={level}
+            onChange={(e) => props.setLevel(e.target.value)}
+          />
           <label className='base-text fw-bold' htmlFor={level}>
             {i18next.t(`main:${level}`)}
           </label>
